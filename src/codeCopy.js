@@ -1,6 +1,9 @@
 import { par } from './output.js'
 
 export default function codeCopied() {
+
+  removeIcon();
+
   const buttons = document.querySelectorAll("a[class]");
   const spans = document.querySelectorAll("span");
   const code = document.createElement('p');
@@ -20,4 +23,12 @@ export default function codeCopied() {
   codeOutput.appendChild(code);
   
   return codeOutput.innerHTML;
+}
+
+function removeIcon() {
+  document.querySelectorAll('i').forEach(function(i){
+    if(i.contentText == '') {
+      i.remove()
+    }
+  })
 }
