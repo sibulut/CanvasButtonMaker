@@ -26,9 +26,9 @@ export default function codeCopied() {
 }
 
 function removeIcon() {
-  document.querySelectorAll('i').forEach(function(i){
-    if(i.contentText == '') {
-      i.remove()
+  document.querySelectorAll('i').forEach(function(el){
+    if(el.textContent == '') {
+      el.remove()
     }
   })
 }
